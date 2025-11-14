@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.5.0" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>c270449b-ecb8-4067-9af5-57f7b3690504</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\MechanicShop.Api\MechanicShop.Api.csproj" />
+    <ProjectReference Include="..\src\MechanicShop.Application\MechanicShop.Application.csproj" />
+    <ProjectReference Include="..\src\MechanicShop.Client\MechanicShop.Client.csproj" />
+    <ProjectReference Include="..\src\MechanicShop.Contracts\MechanicShop.Contracts.csproj" />
+    <ProjectReference Include="..\src\MechanicShop.Domain\MechanicShop.Domain.csproj" />
+    <ProjectReference Include="..\src\MechanicShop.Infrastructure\MechanicShop.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
