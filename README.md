@@ -1,4 +1,4 @@
-[# MechanicShop – Workshop Management System
+# MechanicShop – Workshop Management System
 
 ### Full-Stack Showcase Project | ASP.NET Core | Blazor WebAssembly | Clean Architecture
 
