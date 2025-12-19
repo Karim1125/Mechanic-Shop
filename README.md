@@ -1,77 +1,72 @@
-MechanicShop – Workshop Management System
-Full-Stack Showcase Project | ASP.NET Core | Blazor WebAssembly | Clean Architecture
+# MechanicShop – Workshop Management System
 
-MechanicShop is a workshop management system developed as a full-stack showcase project to demonstrate modern backend architecture, clean design principles, and real-time communication in a business-oriented domain.
+### Full-Stack Showcase Project | ASP.NET Core | Blazor WebAssembly | Clean Architecture
 
-The project focuses on building a scalable, maintainable, and well-structured system for managing automotive repair workflows while applying industry best practices in software design.
+MechanicShop is a workshop management system developed as a full-stack **showcase project** to demonstrate modern backend architecture, clean design principles, and real-time communication in a business-oriented domain.
 
-Architecture Overview
+The project focuses on building a scalable, maintainable, and well-structured system for managing automotive repair workflows while applying industry best practices.
 
-MechanicShop follows Clean Architecture and Domain-Driven Design (DDD) principles to ensure clear separation of concerns, testability, and long-term maintainability.
+---
 
-Architectural Patterns Used
+## Architecture Overview
 
-Clean Architecture (Presentation, Application, Domain, Infrastructure)
+MechanicShop follows **Clean Architecture** and **Domain-Driven Design (DDD)** principles to ensure clear separation of concerns, testability, and long-term maintainability.
 
-Domain-Driven Design (DDD) with rich domain models
+### Architectural Patterns Used
+- Clean Architecture (Presentation, Application, Domain, Infrastructure)
+- Domain-Driven Design (DDD)
+- CQRS-style separation for commands and queries
+- Real-time communication using SignalR
+- Modular, microservices-ready structure
 
-CQRS-style separation for commands and queries
+---
 
-Real-time communication using SignalR
+## Core Features
 
-Modular, microservices-ready project structure
+### Workflow and Operations
+- Work order creation and lifecycle management  
+- Task and repair workflow orchestration  
+- Real-time status updates using SignalR  
+- Workshop capacity and repair spot management  
+- Technician workload and assignment tracking  
 
-Core Features
-Workflow and Operations
+### Billing and Finance
+- Extensible billing and invoicing design  
+- Discount, tax, and pricing rule support  
+- Repair cost calculation and tracking  
 
-Work order creation and lifecycle management
+### Business Management
+- Parts inventory and availability tracking  
+- Supplier and pricing management  
+- Structured audit logging  
 
-Task and repair workflow orchestration
+---
 
-Real-time status updates using SignalR
+## Technical Stack
 
-Workshop capacity and repair spot management
+| Layer | Technologies |
+|------|--------------|
+| Backend | ASP.NET Core 9.0, Entity Framework Core, MediatR, SignalR, Swagger / OpenAPI |
+| Frontend | Blazor WebAssembly, Bootstrap, JavaScript |
+| Database | Microsoft SQL Server |
+| Observability | Serilog, OpenTelemetry |
+| DevOps | Docker, GitHub Actions (CI) |
 
-Technician workload and assignment tracking
+---
 
-Billing and Finance
+## Key Modules
 
-Extensible billing and invoicing design
+- Repair Management – Manage repair tasks and workflows  
+- Billing & Invoicing – Flexible and extensible billing logic  
+- Inventory – Parts, suppliers, and pricing management  
+- Real-Time Updates – Live updates via SignalR  
+- Administration – Configuration and system management  
 
-Support for discounts, taxes, and pricing rules
+---
 
-Repair cost calculation and tracking
+## Project Structure
 
-Business Management
-
-Parts inventory and availability tracking
-
-Supplier and pricing management
-
-Structured audit logging for operations
-
-Technical Stack
-Layer	Technologies
-Backend	ASP.NET Core 9.0, Entity Framework Core, MediatR, SignalR, Swagger/OpenAPI
-Frontend	Blazor WebAssembly, Bootstrap, JavaScript
-Database	Microsoft SQL Server
-Observability	Serilog, OpenTelemetry
-DevOps	Docker, GitHub Actions (CI)
-Key Modules
-
-Repair Management – Manage repair tasks and workflows
-
-Billing & Invoicing – Flexible and extensible billing logic
-
-Inventory – Parts, suppliers, and pricing management
-
-Real-Time Updates – Live status updates via SignalR
-
-Administration – Configuration and system management features
-
-Project Structure
-
-The solution is organized following Clean Architecture, with a clear separation between presentation, application logic, domain, and infrastructure layers.
+The solution is organized using **Clean Architecture** with clear separation between layers.
 
 MechanicShop/
 │
@@ -83,129 +78,115 @@ MechanicShop/
 ├── Directory.Packages.props
 │
 ├── src/
-│   │
-│   ├── MechanicShop.Api/
-│   │   ├── Program.cs
-│   │   ├── appsettings.json
-│   │   ├── Controllers/
-│   │   ├── Components/
-│   │   ├── Middlewares/
-│   │   ├── Extensions/
-│   │   └── Hubs/                     # SignalR hubs
-│   │
-│   ├── MechanicShop.Application/
-│   │   ├── Interfaces/
-│   │   ├── Services/
-│   │   ├── DTOs/
-│   │   ├── Features/                 # CQRS-style use cases
-│   │   └── DependencyInjection.cs
-│   │
-│   ├── MechanicShop.Domain/
-│   │   ├── Entities/
-│   │   ├── ValueObjects/
-│   │   ├── Enums/
-│   │   └── Exceptions/
-│   │
-│   ├── MechanicShop.Infrastructure/
-│   │   ├── Data/
-│   │   │   ├── DbContexts/
-│   │   │   ├── Configurations/
-│   │   │   └── Migrations/
-│   │   ├── Repositories/
-│   │   ├── Identity/
-│   │   ├── RealTime/                 # SignalR implementations
-│   │   └── DependencyInjection.cs
-│   │
-│   └── MechanicShop.Client/
-│       ├── Components/
-│       ├── Common/
-│       ├── Routes.razor
-│       ├── _Imports.razor
-│       └── wwwroot/
+│ ├── MechanicShop.Api/
+│ │ ├── Program.cs
+│ │ ├── appsettings.json
+│ │ ├── Controllers/
+│ │ ├── Components/
+│ │ ├── Middlewares/
+│ │ ├── Extensions/
+│ │ └── Hubs/
+│ │
+│ ├── MechanicShop.Application/
+│ │ ├── Interfaces/
+│ │ ├── Services/
+│ │ ├── DTOs/
+│ │ ├── Features/
+│ │ └── DependencyInjection.cs
+│ │
+│ ├── MechanicShop.Domain/
+│ │ ├── Entities/
+│ │ ├── ValueObjects/
+│ │ ├── Enums/
+│ │ └── Exceptions/
+│ │
+│ ├── MechanicShop.Infrastructure/
+│ │ ├── Data/
+│ │ │ ├── DbContexts/
+│ │ │ ├── Configurations/
+│ │ │ └── Migrations/
+│ │ ├── Repositories/
+│ │ ├── Identity/
+│ │ ├── RealTime/
+│ │ └── DependencyInjection.cs
+│ │
+│ └── MechanicShop.Client/
+│ ├── Components/
+│ ├── Common/
+│ ├── Routes.razor
+│ ├── _Imports.razor
+│ └── wwwroot/
 │
 └── tests/
-    ├── MechanicShop.UnitTests/
-    └── MechanicShop.IntegrationTests/
+├── MechanicShop.UnitTests/
+└── MechanicShop.IntegrationTests/
 
-Quality and Testing
+yaml
+Copy code
 
-Unit and integration tests using xUnit
+---
 
-Application-layer testing with minimal infrastructure coupling
+## Quality and Testing
 
-Centralized validation and error handling
+- Unit and integration tests using xUnit  
+- Application-layer testing with minimal infrastructure coupling  
+- Centralized validation and error handling  
+- Environment-specific configurations  
 
-Environment-specific configurations (Development / Production)
+---
 
-DevOps and Infrastructure
+## DevOps and Infrastructure
 
-Docker containerization for consistent environments
+- Docker containerization for consistent environments  
+- Centralized structured logging using Serilog  
+- Metrics and tracing via OpenTelemetry  
+- CI pipeline using GitHub Actions  
 
-Centralized structured logging using Serilog and Seq
+---
 
-Metrics and tracing via OpenTelemetry
+## Design Goals
 
-CI pipeline using GitHub Actions
+- Demonstrate scalable backend architecture  
+- Apply Clean Architecture and SOLID principles  
+- Enable real-time system communication  
+- Provide a foundation for future expansion  
+- Emphasize code clarity and maintainability  
 
-Deployment-ready configuration setup
+---
 
-Design Goals
+## Best Practices Followed
 
-Demonstrate scalable backend architecture for business applications
+- Clean Architecture  
+- SOLID Principles  
+- Domain-Driven Design (DDD)  
+- Centralized validation and error handling  
+- Secure-by-design approach  
+- Logging and observability  
 
-Apply Clean Architecture and SOLID principles in practice
+---
 
-Enable real-time system communication
+## Future Enhancements
 
-Provide a strong foundation for future feature expansion
+- Role-based authorization  
+- Analytics and KPI dashboards  
+- Payment gateway integration  
+- Mobile-friendly client UI  
+- Predictive reporting features  
 
-Emphasize code clarity, maintainability, and testability
+---
 
-Best Practices Followed
+## Installation and Setup
 
-Clean Architecture
+### Prerequisites
+- .NET 9.0 SDK  
+- SQL Server  
+- Docker Desktop (optional)  
 
-SOLID Principles
+### Steps
 
-Domain-Driven Design (DDD)
-
-Centralized validation and error handling
-
-Secure-by-design approach (authentication & authorization ready)
-
-Logging, tracing, and observability
-
-Future Enhancements
-
-Role-based authorization and permissions
-
-Advanced analytics and KPI dashboards
-
-Payment gateway integration
-
-Mobile-friendly client interface
-
-Predictive maintenance and reporting features
-
-Installation and Setup
-Prerequisites
-
-.NET 9.0 SDK
-
-SQL Server
-
-Docker Desktop (optional, for containerized setup)
-
-Steps
-# 1. Clone the repository
+```bash
 git clone https://github.com/yourusername/MechanicShop.git
-
-# 2. Navigate to the project directory
 cd MechanicShop
-
-# 3. Restore and build
 dotnet restore
 dotnet build
-
-# 4. Run the application
 dotnet run
