@@ -1,4 +1,4 @@
-# MechanicShop – Workshop Management System
+[# MechanicShop – Workshop Management System
 
 ### Full-Stack Showcase Project | ASP.NET Core | Blazor WebAssembly | Clean Architecture
 
@@ -64,10 +64,11 @@ MechanicShop follows **Clean Architecture** and **Domain-Driven Design (DDD)** p
 
 ---
 
-## Project Structure
+## 🗂 Project Structure
 
-The solution is organized using **Clean Architecture** with clear separation between layers.
+The solution is organized using **Clean Architecture** principles:
 
+```
 MechanicShop/
 │
 ├── MechanicShop.sln
@@ -78,54 +79,51 @@ MechanicShop/
 ├── Directory.Packages.props
 │
 ├── src/
-│ ├── MechanicShop.Api/
-│ │ ├── Program.cs
-│ │ ├── appsettings.json
-│ │ ├── Controllers/
-│ │ ├── Components/
-│ │ ├── Middlewares/
-│ │ ├── Extensions/
-│ │ └── Hubs/
-│ │
-│ ├── MechanicShop.Application/
-│ │ ├── Interfaces/
-│ │ ├── Services/
-│ │ ├── DTOs/
-│ │ ├── Features/
-│ │ └── DependencyInjection.cs
-│ │
-│ ├── MechanicShop.Domain/
-│ │ ├── Entities/
-│ │ ├── ValueObjects/
-│ │ ├── Enums/
-│ │ └── Exceptions/
-│ │
-│ ├── MechanicShop.Infrastructure/
-│ │ ├── Data/
-│ │ │ ├── DbContexts/
-│ │ │ ├── Configurations/
-│ │ │ └── Migrations/
-│ │ ├── Repositories/
-│ │ ├── Identity/
-│ │ ├── RealTime/
-│ │ └── DependencyInjection.cs
-│ │
-│ └── MechanicShop.Client/
-│ ├── Components/
-│ ├── Common/
-│ ├── Routes.razor
-│ ├── _Imports.razor
-│ └── wwwroot/
+│   ├── MechanicShop.Api/
+│   │   ├── Program.cs
+│   │   ├── appsettings.json
+│   │   ├── Controllers/
+│   │   ├── Components/
+│   │   ├── Middlewares/
+│   │   ├── Extensions/
+│   │   └── Hubs/
+│   │
+│   ├── MechanicShop.Application/
+│   │   ├── Interfaces/
+│   │   ├── Services/
+│   │   ├── DTOs/
+│   │   ├── Features/
+│   │   └── DependencyInjection.cs
+│   │
+│   ├── MechanicShop.Domain/
+│   │   ├── Entities/
+│   │   ├── ValueObjects/
+│   │   ├── Enums/
+│   │   └── Exceptions/
+│   │
+│   ├── MechanicShop.Infrastructure/
+│   │   ├── Data/
+│   │   │   ├── DbContexts/
+│   │   │   ├── Configurations/
+│   │   │   └── Migrations/
+│   │   ├── Repositories/
+│   │   ├── Identity/
+│   │   ├── RealTime/
+│   │   └── DependencyInjection.cs
+│   │
+│   └── MechanicShop.Client/
+│       ├── Components/
+│       ├── Common/
+│       ├── Routes.razor
+│       ├── _Imports.razor
+│       └── wwwroot/
 │
 └── tests/
-├── MechanicShop.UnitTests/
-└── MechanicShop.IntegrationTests/
-
-yaml
-Copy code
+    ├── MechanicShop.UnitTests/
+    └── MechanicShop.IntegrationTests/
+```
 
 ---
-
 ## Quality and Testing
 
 - Unit and integration tests using xUnit  
@@ -190,3 +188,4 @@ cd MechanicShop
 dotnet restore
 dotnet build
 dotnet run
+](https://github.com/engabdallah123/Setup-App-Clean-Architecture-And-CQRS)
